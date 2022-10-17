@@ -43,7 +43,6 @@ Follow these steps
 "flutter doctor" for spec review
 ```
 
-
 # Hacktoberfest 2k22 Challenge
 
 ## How to Contribute 
