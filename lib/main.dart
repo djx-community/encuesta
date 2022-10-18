@@ -1,7 +1,11 @@
+import 'package:encuesta/config/routes/routes.dart';
+import 'package:encuesta/config/themes/themes.dart';
+import 'package:encuesta/modules/home_screen.dart';
+import 'package:encuesta/modules/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,12 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('My First App'),
-        ),
-        body: const Text('This is my default text!'),
-      ),
-    );
+        theme: ThemeData(
+            scaffoldBackgroundColor: APP_COLOR,
+            textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Serif')),
+        initialRoute: splashScreenRoute,
+        routes: {
+          splashScreenRoute: (context) => const SplashScreen(),
+          homeScreenRoute: (context) => const HomeScreen()
+        });
   }
 }
