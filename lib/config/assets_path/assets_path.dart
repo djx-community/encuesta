@@ -1,0 +1,1 @@
+const appLogo="assets/images/Quiz_Logo.webp";
