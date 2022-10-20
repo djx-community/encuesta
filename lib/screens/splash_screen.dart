@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 5), changeToHomeScreen);
+    changeToHomeScreen(context);
   }
 
   @override
@@ -57,7 +57,8 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
-  Future<void> changeToHomeScreen() async {
+  Future<void> changeToHomeScreen(context) async {
+    await Future<dynamic>.delayed(const Duration(seconds: 3));
     Navigator.of(context).pushReplacementNamed(homeScreenRoute);
   }
 }
