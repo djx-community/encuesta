@@ -61,6 +61,7 @@ flutter:
   assets:
      - assets/images/Quiz_Logo.webp
      - assets/images/Winning_Screen.png
+     - assets/images/fail_image.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
