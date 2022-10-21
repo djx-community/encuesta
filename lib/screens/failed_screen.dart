@@ -8,14 +8,14 @@ import 'package:encuesta/widgets/greeting_screen_image_widget.dart';
 import 'package:encuesta/widgets/score_display_Widget.dart';
 import 'package:flutter/material.dart';
 
-class WinningScreen extends StatefulWidget {
-  const WinningScreen({super.key});
+class FailedScreen extends StatefulWidget {
+  const FailedScreen({super.key});
 
   @override
-  State<WinningScreen> createState() => _WinningScreenState();
+  State<FailedScreen> createState() => _FailedScreenState();
 }
 
-class _WinningScreenState extends State<WinningScreen> {
+class _FailedScreenState extends State<FailedScreen> {
   @override
   void initState() {
     super.initState();
@@ -25,16 +25,19 @@ class _WinningScreenState extends State<WinningScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: winningScreenColor,
+      backgroundColor: APP_COLOR,
       body: SafeArea(
           child: Column(
         children: const <Widget>[
-          GreetingImageAndTextWidget(
-            greetingImage: winningImage,
-            greetingMessage: positiveGreeting,
-          ),
           Padding(
             padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
+            child: GreetingImageAndTextWidget(
+              greetingImage: failedImage,
+              greetingMessage: negativeGreeting,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
             child: Text(
               yourScore,
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
