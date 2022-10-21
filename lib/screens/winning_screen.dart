@@ -30,7 +30,7 @@ class _WinningScreenState extends State<WinningScreen> {
           child: Column(
         children: const <Widget>[
           GreetingImageAndTextWidget(
-            greetingImage: wineImage,
+            greetingImage: winningImage,
             greetingMessage: positiveGreeting,
           ),
           Padding(
