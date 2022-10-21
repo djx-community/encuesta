@@ -1,5 +1,6 @@
 import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
+import 'package:encuesta/screens/failed_screen.dart';
 import 'package:encuesta/screens/home_screen.dart';
 import 'package:encuesta/screens/leader_board_screen.dart';
 import 'package:encuesta/screens/splash_screen.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
           splashScreenRoute: (context) => const SplashScreen(),
           homeScreenRoute: (context) => const HomeScreen(),
           winningScreenRoute: (context) => const WinningScreen(),
+          failedScreenRoute: (context) => const FailedScreen(),
           leaderBoardScreenRoute: (context) => const LeaderBoardScreen(),
         });
   }
