@@ -17,7 +17,6 @@ class _GameLoadingScreenState extends State<GameLoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: winningScreenColor,
       body: SafeArea(
           child: Column(
         children: const <Widget>[
