@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
-            appBarTheme: const AppBarTheme(color: PRIMARY_COLOR),
             scaffoldBackgroundColor: APP_COLOR,
             textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Serif')),
         initialRoute: splashScreenRoute,
