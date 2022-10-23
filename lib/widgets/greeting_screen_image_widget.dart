@@ -19,7 +19,7 @@ class GreetingImageAndTextWidget extends StatelessWidget {
                 greetingMessage,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                    fontSize: 35,
+                    fontSize: 30,
                     fontWeight: FontWeight.w600,
                     overflow: TextOverflow.fade),
               ),

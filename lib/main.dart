@@ -1,7 +1,11 @@
 import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
+import 'package:encuesta/screens/failed_screen.dart';
+import 'package:encuesta/screens/game_loading_screen.dart';
 import 'package:encuesta/screens/home_screen.dart';
+import 'package:encuesta/screens/leader_board_screen.dart';
 import 'package:encuesta/screens/splash_screen.dart';
+import 'package:encuesta/screens/winning_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +24,11 @@ class MyApp extends StatelessWidget {
         initialRoute: splashScreenRoute,
         routes: {
           splashScreenRoute: (context) => const SplashScreen(),
-          homeScreenRoute: (context) => const HomeScreen()
+          homeScreenRoute: (context) => const HomeScreen(),
+          winningScreenRoute: (context) => const WinningScreen(),
+          failedScreenRoute: (context) => const FailedScreen(),
+          leaderBoardScreenRoute: (context) => const LeaderBoardScreen(),
+          gameLoadingScreenRoute: (context) => const GameLoadingScreen(),
         });
   }
 }
