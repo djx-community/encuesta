@@ -3,5 +3,6 @@
         "ARGB",
         "LTRB",
         "webp"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
