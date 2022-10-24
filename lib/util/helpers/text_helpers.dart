@@ -8,3 +8,4 @@ const negativeGreeting = 'Oops! You Lost!';
 const stayTuned = 'Stay Tuned...';
 const loading = "Loading...";
 const loadingValue = 0.5;
+const roomId = 'asd2134';
