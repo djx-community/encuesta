@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           homeScreenRoute: (context) => const HomeScreen(),
           winningScreenRoute: (context) => const WinningScreen(),
           failedScreenRoute: (context) => const FailedScreen(),
-          leaderBoardScreenRoute: (context) => const LeaderBoardScreen(),
+          leaderBoardScreenRoute: (context) =>const  LeaderBoardScreen(),
           gameLoadingScreenRoute: (context) => const GameLoadingScreen(),
         });
   }
