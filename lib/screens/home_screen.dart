@@ -1,57 +1,61 @@
 import 'package:encuesta/config/assets_path/assets_path.dart';
+import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
-import 'package:encuesta/screens/splash_screen.dart';
 import 'package:encuesta/screens/winning_screen.dart';
-import 'package:encuesta/widgets/custom_button.dart';
+import 'package:encuesta/util/helpers/text_helpers.dart';
+import 'package:encuesta/widgets/custom_buttons_widgets.dart';
 import 'package:encuesta/widgets/nav_bar.dart';
-import 'package:encuesta/widgets/user_indicator.dart';
+import 'package:encuesta/widgets/user_id_app_card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          bottomNavigationBar: navBars(),
-          body: Column(children: [
-            UserIndicator(
-                // bug in container
-                // if name = container size is fixed and looks bad
-                user_Name: 'mohammed ek',
-                user_Avatar:
-                    "https://c1.alamy.com/thumbs/rd50gg/avatar-sign-icon-vector-illustration-for-personal-and-commercial-use-clean-look-trendy-icon-rd50gg.jpg"),
-            Image.asset(
-              homeScreenImage,
-              height: 260,
-              width: 320,
-            ),
-            customButton(
-              button_text: 'open game',
-              button_color: Colors.purple,
+    return Scaffold(
+        bottomNavigationBar: const navBars(),
+        body: SafeArea(
+          child: Column(children: [
+            Container(
+                padding:const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                child: const UserIdAppCardWidget()),
+            const Image(image: AssetImage(homeScreenImage)),
+            const Text(letsHackHelperText,
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400)),
+            const SizedBox(height: 20),
+            CustomButton(
               onPress: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => WinningScreen()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const WinningScreen()),
+                );
+              },
+              buttonText: quickPlayHelperText,
+              buttonColor: PRIMARY_COLOR,
+              buttonTextColor: textColor,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            CustomOutlinedButton(
+              buttonText: socialPlayHelperText,
+              buttonTextColor: textColor,
+              onPress: () {
+                Navigator.pushNamed(context, hostingScreenRoute);
               },
             ),
-            SizedBox(
-              height: 5,
+            const SizedBox(
+              height: 20,
             ),
-            customButton(
-              button_text: 'single play',
-              button_color: Colors.indigo,
+            CustomOutlinedButton(
+              buttonText: singlePlayerHelperText,
+              buttonTextColor: textColor,
               onPress: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SplashScreen()));
+                Navigator.pushNamed(context, hostingScreenRoute);
               },
             ),
-            SizedBox(
-              height: 5,
-            ),
-            customButton(button_text: 'Quick Play', button_color: Colors.red)
-          ])),
-    );
+          ]),
+        ));
   }
 }
