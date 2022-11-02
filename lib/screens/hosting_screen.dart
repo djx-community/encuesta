@@ -22,7 +22,7 @@ class _HostingScreenState extends State<HostingScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           const Padding(
-            padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
+            padding: EdgeInsets.fromLTRB(60, 0, 60, 0),
             child: UserIdAppCardWidget(),
           ),
           const SizedBox(height: 1),

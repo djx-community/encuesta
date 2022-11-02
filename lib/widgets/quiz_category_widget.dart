@@ -25,15 +25,16 @@ class _QuizCategoryListWidgetState extends State<QuizCategoryListWidget> {
         itemCount: widget.categoryList.length,
         itemBuilder: (BuildContext context, int index) {
           return OutlinedButton(
-            style:
-                OutlinedButton.styleFrom(side:const BorderSide(color: buttonBorderColor)),
+            style: OutlinedButton.styleFrom(
+                side: const BorderSide(color: buttonBorderColor)),
             onPressed: () {
               setState(() {
-                _categoryValue = index ;
+                _categoryValue = index;
               });
               print(_categoryValue);
             },
             child: ListTile(
+              contentPadding: const EdgeInsets.all(2),
               title: Text(widget.categoryList[index]),
               trailing: Radio(
                 mouseCursor: MouseCursor.defer,
