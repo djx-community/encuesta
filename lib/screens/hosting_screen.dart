@@ -1,3 +1,4 @@
+import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/quiz_category_widget.dart';
@@ -153,7 +154,10 @@ class _HostingScreenState extends State<HostingScreen> {
                           style: ElevatedButton.styleFrom(
                               minimumSize: const Size(120, 40),
                               backgroundColor: PRIMARY_COLOR),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(
+                                context, hostedLobbyScreenRoute);
+                          },
                           child: const Text(
                             nextHelperText,
                             style: TextStyle(color: textColor),

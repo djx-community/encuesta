@@ -1,3 +1,5 @@
+import 'package:encuesta/config/assets_path/assets_path.dart';
+
 const appName = "Encuesta";
 const developedBy = "Powered By DJX Community";
 const gameScore = "25";
@@ -18,11 +20,14 @@ const timerTextHelper = 'Timer';
 const noOfQuestionsTextHelper = 'No. Of Questions';
 const categoryHelperText = 'Select Category';
 const nextHelperText = 'Next';
+const startHelperText = 'Start';
 const specialHelperText = 'Special';
+const cancelHelperText = 'Cancel';
 const socialPlayHelperText = 'Social Play';
 const singlePlayerHelperText = 'Single Player';
 const quickPlayHelperText = 'Quick Play';
 const letsHackHelperText = "Let's Hack A Quiz";
+const lobbyHelperText = 'Joined Players';
 
 //Leader Board Assets
 const profilePic1 =
@@ -74,3 +79,29 @@ final category = [
   'Entertainment: Cartoon & Animations'
 ];
 const roomId = 'asd2134';
+final avatars = [
+  profilePic1,
+  profilePic2,
+  profilePic3,
+  profileImage,
+  profilePic2,
+  profilePic1,
+  profilePic2,
+  profilePic3,
+  profileImage,
+  profilePic2,
+  profilePic1,
+];
+final joinedPlayersId = [
+  'id1231',
+  'id12312',
+  'id12341',
+  'id67321',
+  'id12341',
+  'idq2311',
+  'idq2311',
+  'idq2311',
+  'idq2311',
+  'idq2311',
+  'idq2311'
+];
