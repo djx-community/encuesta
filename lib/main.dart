@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Serif')),
         initialRoute: splashScreenRoute,
         routes: {
-          splashScreenRoute: (context) => const SplashScreen(),
+          splashScreenRoute: (context) => const LobbyScreen(),
           homeScreenRoute: (context) => const HomeScreen(),
           winningScreenRoute: (context) => const WinningScreen(),
           failedScreenRoute: (context) => const FailedScreen(),

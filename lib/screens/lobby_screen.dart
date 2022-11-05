@@ -18,25 +18,21 @@ class _LobbyScreenState extends State<LobbyScreen> {
     return Scaffold(
       body: SafeArea(
           child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Padding(
             padding: EdgeInsets.fromLTRB(60, 0, 60, 5),
             child: UserIdAppCardWidget(),
           ),
           const Text(lobbyHelperText,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400)),
-          Container(
-            width: 400,
-            height: 500, //needs to set for the remaining space
-            child: JoinedPlayersListWidget(
-                avatar: avatars, players: users, id: joinedPlayersId),
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400)),
+          Expanded(
+            child: JoinedPlayersListWidget(avatar: avatars, players: users, id: joinedPlayersId)
           ),
-          Container(
-            width: 300,
-            height: 70,
+          Padding(
+            padding: const EdgeInsets.all(8),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 OutlinedButton(
                     onPressed: () {

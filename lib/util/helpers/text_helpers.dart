@@ -83,14 +83,14 @@ final avatars = [
   profilePic1,
   profilePic2,
   profilePic3,
-  profileImage,
   profilePic2,
   profilePic1,
   profilePic2,
   profilePic3,
-  profileImage,
   profilePic2,
   profilePic1,
+  profilePic2,
+  profilePic3,
 ];
 final joinedPlayersId = [
   'id1231',

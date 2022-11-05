@@ -1,4 +1,3 @@
-import 'package:encuesta/config/assets_path/assets_path.dart';
 import 'package:flutter/material.dart';
 
 class JoinedPlayersListWidget extends StatefulWidget {
@@ -7,7 +6,8 @@ class JoinedPlayersListWidget extends StatefulWidget {
       required this.avatar,
       required this.players,
       required this.id});
-  final avatar, players, id;
+  final List avatar, players, id;
+
   @override
   State<JoinedPlayersListWidget> createState() =>
       _JoinedPlayersListWidgetState();
@@ -21,13 +21,12 @@ class _JoinedPlayersListWidgetState extends State<JoinedPlayersListWidget> {
       itemCount: widget.players.length - 1, // done for temp use
       itemBuilder: (BuildContext context, int index) {
         return Container(
-          height: 50,
           color: Colors.white,
           child: ListTile(
             leading: CircleAvatar(
               backgroundImage: NetworkImage(widget.avatar[index]),
             ),
-            title: Text(widget.players[index]),
+            title: Center(child: Text(widget.players[index])),
             trailing: Text(widget.id[index]),
           ),
         );
