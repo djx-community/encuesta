@@ -4,4 +4,5 @@ const winningScreenRoute = '/wine';
 const failedScreenRoute = '/failed';
 const leaderBoardScreenRoute = '/leader-Board';
 const gameLoadingScreenRoute = '/game-loading';
-const hostingScreenRoute='/hosting';
+const hostingScreenRoute = '/hosting';
+const hostedLobbyScreenRoute = '/hosted-lobby';

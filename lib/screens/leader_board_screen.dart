@@ -59,7 +59,7 @@ class LeaderBoardScreen extends StatelessWidget {
                       users: users,
                       points: points,
                     ))),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 100,
               child: Row(
