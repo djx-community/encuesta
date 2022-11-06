@@ -129,10 +129,10 @@ class _HostingScreenState extends State<HostingScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Container(
+                  SizedBox(
                       height: 400,
                       child: QuizCategoryListWidget(categoryList: category)),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 70,
                     child: Row(
@@ -156,7 +156,7 @@ class _HostingScreenState extends State<HostingScreen> {
                               backgroundColor: PRIMARY_COLOR),
                           onPressed: () {
                             Navigator.pushNamed(
-                                context, hostedLobbyScreenRoute);
+                                context, joinedRoomScreenRoute);
                           },
                           child: const Text(
                             nextHelperText,
