@@ -1,10 +1,5 @@
 import 'package:encuesta/config/themes/themes.dart';
-import 'package:encuesta/util/helpers/text_helpers.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
 class QuizCategoryListWidget extends StatefulWidget {
   const QuizCategoryListWidget({super.key, required this.categoryList});
   final List categoryList;
@@ -18,7 +13,7 @@ class _QuizCategoryListWidgetState extends State<QuizCategoryListWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: ListView.separated(
         padding: const EdgeInsets.all(1),

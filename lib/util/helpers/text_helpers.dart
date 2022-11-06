@@ -30,9 +30,13 @@ const letsHackHelperText = "Let's Hack A Quiz";
 const lobbyHelperText = 'Joined Players';
 const quizPoolHelperText = 'Quiz Pool';
 const easyHelperText = 'Easy';
+const selectedDifficultyLevelHelperText='Difficulty Level';
+const selectedCategoryHelperText='Category';
 const queNoHelperText = '30';
 const timeHelperText = '1 min';
+const timeLimitHelperText = 'Time Limit';
 const leaveRoomHelperText = 'Leave Room';
+const waitingForPlayersHelperText = 'Waiting For the Host to Start the Game';
 
 //Leader Board Assets
 const profilePic1 =
