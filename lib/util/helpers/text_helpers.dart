@@ -28,6 +28,11 @@ const singlePlayerHelperText = 'Single Player';
 const quickPlayHelperText = 'Quick Play';
 const letsHackHelperText = "Let's Hack A Quiz";
 const lobbyHelperText = 'Joined Players';
+const quizPoolHelperText = 'Quiz Pool';
+const easyHelperText = 'Easy';
+const queNoHelperText = '30';
+const timeHelperText = '1 min';
+const leaveRoomHelperText = 'Leave Room';
 
 //Leader Board Assets
 const profilePic1 =
