@@ -52,7 +52,8 @@ class SocialPlayScreen extends StatelessWidget {
               buttonText: joinRoomHelperText,
               buttonTextColor: textColor,
               onPress: () {
-                Navigator.pushNamed(context, joinedRoomScreenRoute);
+                Navigator.pushNamed(context,
+                    joinedRoomScreenRoute); //need to add popup for entering room creddentials
               },
             ),
           ]),
