@@ -1,36 +1,41 @@
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:flutter/material.dart';
+import 'package:timer_count_down/timer_count_down.dart';
 
 class QuizTimerWidget extends StatelessWidget {
-  const QuizTimerWidget({super.key, required this.time});
-  final int time;
+  const QuizTimerWidget({super.key, required this.duration});
+  final int duration;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 75,
-      child: Stack(
-        children: <Widget>[
-          const Center(
-            child: CircularProgressIndicator(
-              strokeWidth: 35,
-              value: 0.8,
-              backgroundColor: Colors.white,
-              valueColor: AlwaysStoppedAnimation<Color>(PRIMARY_COLOR),
-            ),
-          ),
-          Center(
-              child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              "$time Sec",
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+        height: 75,
+        child: Countdown(
+          seconds: duration,
+          build: (BuildContext context, double time) => Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                textAlign: TextAlign.center,
+                "$time",
+                style: const TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-            ),
-          ))
-        ],
-      ),
-    );
+              const Text(
+                textAlign: TextAlign.center,
+                " Sec",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ),
+          interval: const Duration(milliseconds: 100),
+          onFinished: () {
+            print('Timer is done!');
+          },
+        ));
   }
 }
