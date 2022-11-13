@@ -2,7 +2,7 @@ import 'package:encuesta/config/themes/themes.dart';
 import 'package:flutter/material.dart';
 
 class QuestionOptionsWidget extends StatefulWidget {
-  QuestionOptionsWidget({super.key, required this.options});
+  const QuestionOptionsWidget({super.key, required this.options});
   final List options;
 
   @override
@@ -11,8 +11,10 @@ class QuestionOptionsWidget extends StatefulWidget {
 
 class _QuestionOptionsWidgetState extends State<QuestionOptionsWidget> {
   int _selectedOption = -1;
-  Color _answerColor = wrongAnswerColor;
   int answer = 0;
+  Color _answerColor = wrongAnswerColor;
+  bool _isAnswered = false;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -22,20 +24,25 @@ class _QuestionOptionsWidgetState extends State<QuestionOptionsWidget> {
         itemBuilder: (BuildContext context, int index) {
           return OutlinedButton(
             style: OutlinedButton.styleFrom(
-                backgroundColor:index == _selectedOption ? _answerColor : Colors.white,
-                side: const BorderSide(color: buttonBorderColor)),
-            onPressed: () {
+                backgroundColor:
+                    index == _selectedOption ? _answerColor : Colors.white,
+                side: const BorderSide(color: buttonBorderColor, width: 2)),
+            onPressed: !_isAnswered
+                ? () {
 // -----------------Function to check answer-----------------
-              setState(() {
-                if (index == answer) {
-                  _selectedOption = answer;
-                  _answerColor = rightAnswerColor;
-                } else {
-                  _selectedOption = index;
-                  _answerColor = wrongAnswerColor;
-                }
-              });
-            },
+                    setState(() {
+                      if (index == answer) {
+                        _selectedOption = answer;
+                        _answerColor = rightAnswerColor;
+                        _isAnswered = true;
+                      } else {
+                        _selectedOption = index;
+                        _answerColor = wrongAnswerColor;
+                        _isAnswered = true;
+                      }
+                    });
+                  }
+                : null,
             child: Padding(
               padding: const EdgeInsets.only(top: 20, bottom: 20),
               child: Text(widget.options[index],
