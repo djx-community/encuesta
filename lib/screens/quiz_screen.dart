@@ -1,4 +1,5 @@
 import 'package:dotted_line/dotted_line.dart';
+import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/question_options_list_widget.dart';
@@ -32,12 +33,14 @@ class _QuizScreenState extends State<QuizScreen> {
               child:
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(homeScreenRoute);
+                    },
                     style: OutlinedButton.styleFrom(
                         minimumSize: const Size(120, 40),
                         side: const BorderSide(color: Colors.red, width: 1)),
                     child: const Text(
-                      quickPlayHelperText,
+                      quitQuizHelperText,
                       style: TextStyle(color: Colors.red),
                     )),
                 const SizedBox(
