@@ -26,8 +26,7 @@ class MyApp extends StatelessWidget {
             textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Serif')),
         initialRoute: splashScreenRoute,
         routes: {
-          // splashScreenRoute: (context) => const SplashScreen(),
-          splashScreenRoute: (context) => const QuizScreen(),
+          splashScreenRoute: (context) => const SplashScreen(),
           homeScreenRoute: (context) => const HomeScreen(),
           winningScreenRoute: (context) => const WinningScreen(),
           failedScreenRoute: (context) => const FailedScreen(),
@@ -35,6 +34,7 @@ class MyApp extends StatelessWidget {
           leaderBoardScreenRoute: (context) => const LeaderBoardScreen(),
           gameLoadingScreenRoute: (context) => const GameLoadingScreen(),
           hostedLobbyScreenRoute: (context) => const LobbyScreen(),
+          quizScreenRoute: (context) => const QuizScreen(),
         });
   }
 }
