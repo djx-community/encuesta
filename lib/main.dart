@@ -6,6 +6,7 @@ import 'package:encuesta/screens/home_screen.dart';
 import 'package:encuesta/screens/hosting_screen.dart';
 import 'package:encuesta/screens/leader_board_screen.dart';
 import 'package:encuesta/screens/lobby_screen.dart';
+import 'package:encuesta/screens/quiz_screen.dart';
 import 'package:encuesta/screens/splash_screen.dart';
 import 'package:encuesta/screens/winning_screen.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
             textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Serif')),
         initialRoute: splashScreenRoute,
         routes: {
-          splashScreenRoute: (context) => const SplashScreen(),
+          // splashScreenRoute: (context) => const SplashScreen(),
+          splashScreenRoute: (context) => const QuizScreen(),
           homeScreenRoute: (context) => const HomeScreen(),
           winningScreenRoute: (context) => const WinningScreen(),
           failedScreenRoute: (context) => const FailedScreen(),
