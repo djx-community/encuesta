@@ -1,4 +1,5 @@
 import 'package:dotted_line/dotted_line.dart';
+import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:flutter/material.dart';
 
 class QuizScreenHeadWidget extends StatelessWidget {
@@ -24,7 +25,7 @@ class QuizScreenHeadWidget extends StatelessWidget {
             height: 5,
           ),
           Text(
-            'Question $questionNo/$totalQuestion',
+            '$questionHelperText $questionNo/$totalQuestion',
             style:const TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
           ),
           const SizedBox(

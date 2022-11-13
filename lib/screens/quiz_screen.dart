@@ -15,8 +15,6 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
- 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,11 +22,11 @@ class _QuizScreenState extends State<QuizScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-           const QuizScreenHeadWidget(quizName: "Quiz Name", questionNo: "05", totalQuestion: "20"),
-           const QuizQuestionCanvas(question: "What is the capital of India?"),	
-           const QuizTimerWidget(duration: 60),
-           const QuestionOptionsWidget(options: optionsTextHelpers),
-           
+            const QuizScreenHeadWidget(
+                quizName: "Quiz Name", questionNo: "05", totalQuestion: "20"),
+            const QuizQuestionCanvas(question: "What is the capital of India?"),
+            const QuizTimerWidget(duration: 60),
+            const QuestionOptionsWidget(options: optionsTextHelpers),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child:
@@ -39,7 +37,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         minimumSize: const Size(120, 40),
                         side: const BorderSide(color: Colors.red, width: 1)),
                     child: const Text(
-                      'Quit Quiz',
+                      quickPlayHelperText,
                       style: TextStyle(color: Colors.red),
                     )),
                 const SizedBox(
@@ -52,7 +50,7 @@ class _QuizScreenState extends State<QuizScreen> {
                           const Color.fromARGB(255, 214, 255, 252)),
                   onPressed: () {},
                   child: const Text(
-                    'Next',
+                    nextHelperText,
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
