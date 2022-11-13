@@ -8,3 +8,4 @@ const hostingScreenRoute = '/hosting';
 const hostedLobbyScreenRoute = '/hosted-lobby';
 const quizScreenRoute = '/quiz';
 const joinedRoomScreenRoute = '/joined-room';
+const socialPlayScreenRoute = '/social-play';

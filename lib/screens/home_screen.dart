@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         body: SafeArea(
           child: Column(children: [
             Container(
-                padding:const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                 child: const UserIdAppCardWidget()),
             const Image(image: AssetImage(homeScreenImage)),
             const Text(letsHackHelperText,
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
               buttonText: socialPlayHelperText,
               buttonTextColor: textColor,
               onPress: () {
-                Navigator.pushNamed(context, hostingScreenRoute);
+                Navigator.pushNamed(context, socialPlayScreenRoute);
               },
             ),
             const SizedBox(
