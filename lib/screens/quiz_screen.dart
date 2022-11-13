@@ -24,7 +24,7 @@ class _QuizScreenState extends State<QuizScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             const QuizScreenHeadWidget(
-                quizName: "Quiz Name", questionNo: "05", totalQuestion: "20"),
+                quizName: "Quiz Name", questionNo: "01", totalQuestion: "20"),
             const QuizQuestionCanvas(question: "What is the capital of India?"),
             const QuizTimerWidget(duration: 60),
             const QuestionOptionsWidget(options: optionsTextHelpers),
@@ -51,7 +51,9 @@ class _QuizScreenState extends State<QuizScreen> {
                       minimumSize: const Size(120, 40),
                       backgroundColor:
                           const Color.fromARGB(255, 214, 255, 252)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(winningScreenRoute);
+                  },
                   child: const Text(
                     nextHelperText,
                     style: TextStyle(color: Colors.black),

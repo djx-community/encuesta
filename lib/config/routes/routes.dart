@@ -7,3 +7,4 @@ const gameLoadingScreenRoute = '/game-loading';
 const hostingScreenRoute = '/hosting';
 const hostedLobbyScreenRoute = '/hosted-lobby';
 const quizScreenRoute = '/quiz';
+const joinedRoomScreenRoute = '/joined-room';

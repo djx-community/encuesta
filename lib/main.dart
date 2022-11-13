@@ -4,6 +4,7 @@ import 'package:encuesta/screens/failed_screen.dart';
 import 'package:encuesta/screens/game_loading_screen.dart';
 import 'package:encuesta/screens/home_screen.dart';
 import 'package:encuesta/screens/hosting_screen.dart';
+import 'package:encuesta/screens/joined_room_screen.dart';
 import 'package:encuesta/screens/leader_board_screen.dart';
 import 'package:encuesta/screens/lobby_screen.dart';
 import 'package:encuesta/screens/quiz_screen.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
           gameLoadingScreenRoute: (context) => const GameLoadingScreen(),
           hostedLobbyScreenRoute: (context) => const LobbyScreen(),
           quizScreenRoute: (context) => const QuizScreen(),
+          joinedRoomScreenRoute: (context) => const JoinedRoomScreen(),
         });
   }
 }

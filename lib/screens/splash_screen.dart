@@ -56,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
       )),
     );
   }
-
+ 
   Future<void> changeToHomeScreen(context) async {
     await Future<dynamic>.delayed(const Duration(seconds: 3));
     Navigator.of(context).pushReplacementNamed(homeScreenRoute);
