@@ -18,8 +18,10 @@ const quizConfigurationHelperText = "Quiz Configuration";
 const difficultyLevelHelperText = "Select Difficulty Level";
 const timerTextHelper = 'Timer';
 const noOfQuestionsTextHelper = 'No. Of Questions';
+const questionHelperText="Question";
 const categoryHelperText = 'Select Category';
 const nextHelperText = 'Next';
+const quitQuizHelperText = 'Quit Quiz';
 const startHelperText = 'Start';
 const specialHelperText = 'Special';
 const cancelHelperText = 'Cancel';
@@ -116,3 +118,5 @@ final joinedPlayersId = [
   'idq2311',
   'idq2311'
 ];
+
+ const optionsTextHelpers = ['Delhi', 'Kerala', 'Karnadaka', 'Tamil Nadu'];

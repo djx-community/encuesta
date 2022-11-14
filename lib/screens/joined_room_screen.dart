@@ -1,11 +1,23 @@
+import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/user_id_app_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:progress_indicators/progress_indicators.dart';
 
-class JoinedRoomScreen extends StatelessWidget {
+class JoinedRoomScreen extends StatefulWidget {
   const JoinedRoomScreen({super.key});
+
+  @override
+  State<JoinedRoomScreen> createState() => _JoinedRoomScreenState();
+}
+
+class _JoinedRoomScreenState extends State<JoinedRoomScreen> {
+  @override
+  void initState() {
+    super.initState();
+    changeToQuizScreen(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -120,5 +132,10 @@ class JoinedRoomScreen extends StatelessWidget {
         ],
       )),
     );
+  }
+
+  Future<void> changeToQuizScreen(context) async {
+    await Future<dynamic>.delayed(const Duration(seconds: 3));
+    Navigator.of(context).pushReplacementNamed(quizScreenRoute);
   }
 }

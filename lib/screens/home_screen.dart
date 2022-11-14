@@ -1,7 +1,7 @@
 import 'package:encuesta/config/assets_path/assets_path.dart';
 import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
-import 'package:encuesta/screens/winning_screen.dart';
+import 'package:encuesta/screens/hosting_screen.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/custom_buttons_widgets.dart';
 import 'package:encuesta/widgets/nav_bar.dart';
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const WinningScreen()),
+                      builder: (context) => const HostingScreen()),
                 );
               },
               buttonText: quickPlayHelperText,
