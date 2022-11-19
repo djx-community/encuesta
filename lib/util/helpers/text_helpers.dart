@@ -41,6 +41,7 @@ const leaveRoomHelperText = 'Leave Room';
 const waitingForPlayersHelperText = 'Waiting For the Host to Start the Game';
 const joinRoomHelperText = 'Join Room';
 const hostRoomHelperText = 'Host Room';
+const gameScreenHelperText = 'Game Screen';
 
 //Leader Board Assets
 const profilePic1 =
