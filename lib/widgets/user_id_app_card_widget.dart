@@ -7,37 +7,40 @@ class UserIdAppCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: PRIMARY_COLOR,
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.horizontal(
-              left: Radius.circular(30), right: Radius.circular(10))),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          const CircleAvatar(
-            radius: 25,
-            backgroundImage: NetworkImage(profilePic1),
-          ),
-          const Text(
-            userIDHelperText,
-            style: TextStyle(fontSize: 15),
-          ),
-          Row(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.copy),
-                iconSize: 20,
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.share),
-                iconSize: 20,
-              ),
-            ],
-          ),
-        ],
+    return SizedBox(
+      width: 300,
+      child: Card(
+        color: PRIMARY_COLOR,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.horizontal(
+                left: Radius.circular(30), right: Radius.circular(10))),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            const CircleAvatar(
+              radius: 25,
+              backgroundImage: NetworkImage(profilePic1),
+            ),
+            const Text(
+              userIDHelperText,
+              style: TextStyle(fontSize: 15),
+            ),
+            Row(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.copy,color: textColor,),
+                  iconSize: 20,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.share,color: textColor,),
+                  iconSize: 20,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
