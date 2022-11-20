@@ -26,8 +26,10 @@ class _QuizScreenState extends State<QuizScreen> {
             const QuizScreenHeadWidget(
                 quizName: "Quiz Name", questionNo: "01", totalQuestion: "20"),
             const QuizQuestionCanvas(question: "What is the capital of India?"),
-            const QuizTimerWidget(duration: 60),
-            const QuestionOptionsWidget(options: optionsTextHelpers),
+             QuizTimerWidget(duration: 60, onTimeOut: () {
+              print("Time Out");
+            }),
+            const QuestionOptionsWidget(options: optionsTextHelpers,isTimeOut: false,),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child:
