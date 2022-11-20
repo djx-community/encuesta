@@ -27,7 +27,6 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  dotted_line: ^3.1.0
   flutter:
     sdk: flutter
 
@@ -61,20 +60,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-<<<<<<< HEAD
-    - assets/images/Quiz_Logo.webp
-    - assets/images/Winning_Screen.png
-    - assets/images/fail_image.webp
-    - assets/images/game_loading.png
-    - assets/images/home_screen.png
-=======
      - assets/images/Quiz_Logo.webp
      - assets/images/Winning_Screen.png
      - assets/images/fail_image.webp
      - assets/images/game_loading.png
      - assets/images/home_screen.png
      - assets/images/social_play.png
->>>>>>> 3b7ee017c306903712196e9bf9e2e86b89bf6f31
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

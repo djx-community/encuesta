@@ -136,6 +136,6 @@ class _JoinedRoomScreenState extends State<JoinedRoomScreen> {
 
   Future<void> changeToQuizScreen(context) async {
     await Future<dynamic>.delayed(const Duration(seconds: 3));
-    Navigator.of(context).pushReplacementNamed(quizScreenRoute);
+    Navigator.of(context).pushReplacementNamed(hostViewOfGameScreenRoute);
   }
 }
