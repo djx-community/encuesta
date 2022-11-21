@@ -72,6 +72,7 @@ class _QuestionOptionsWidgetState extends State<QuestionOptionsWidget> {
         },
         separatorBuilder: (BuildContext context, int index) => const Divider(
           color: Colors.white,
+          height: 7,
         ),
       ),
     );

@@ -15,7 +15,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         bottomNavigationBar: const navBars(),
         body: SafeArea(
-          child: Column(children: [
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 10,
+                width: double.infinity,
+              ),
             Container(
                 padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                 child: const UserIdAppCardWidget()),

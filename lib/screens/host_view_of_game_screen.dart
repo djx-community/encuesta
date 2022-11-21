@@ -32,8 +32,8 @@ class _HostViewOfGameScreenState extends State<HostViewOfGameScreen> {
               indicatorColor: tabIndicatorColor,
               labelColor: textColor,
               tabs: <Widget>[
-                Tab(text: gameScreenHelperText, icon: Icon(Icons.quiz)),
-                Tab(text: leaderBoardHelperText, icon: Icon(Icons.leaderboard)),
+                Tab(icon: Icon(Icons.quiz)),
+                Tab( icon: Icon(Icons.leaderboard)),
               ],
             ),
           ),
