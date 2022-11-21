@@ -22,6 +22,10 @@ class _HostingScreenState extends State<HostingScreen> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          const SizedBox(
+            height: 10,
+            width: double.infinity,
+          ),
           const Padding(
             padding: EdgeInsets.fromLTRB(60, 0, 60, 0),
             child: UserIdAppCardWidget(),
@@ -80,7 +84,9 @@ class _HostingScreenState extends State<HostingScreen> {
                         IconButton(
                             onPressed: () {
                               setState(() {
-                                _noOfQuestions++;
+                                if (_noOfQuestions < 20) {
+                                  _noOfQuestions++;
+                                }
                               });
                             },
                             icon: const Icon(Icons.add)),
@@ -101,7 +107,7 @@ class _HostingScreenState extends State<HostingScreen> {
                             onPressed: () {
                               setState(() {
                                 if (_timer >= 6) {
-                                  _timer--;
+                                  _timer = _timer - 5;
                                 }
                               });
                             },
@@ -113,7 +119,9 @@ class _HostingScreenState extends State<HostingScreen> {
                         IconButton(
                             onPressed: () {
                               setState(() {
-                                _timer = _timer + 5;
+                                if (_timer < 300) {
+                                  _timer = _timer + 5;
+                                }
                               });
                             },
                             icon: const Icon(Icons.add)),
@@ -155,11 +163,10 @@ class _HostingScreenState extends State<HostingScreen> {
                               minimumSize: const Size(120, 40),
                               backgroundColor: PRIMARY_COLOR),
                           onPressed: () {
-                            Navigator.pushNamed(
-                                context, joinedRoomScreenRoute);
+                            Navigator.pushNamed(context, joinedRoomScreenRoute);
                           },
                           child: const Text(
-                            nextHelperText,
+                            hostHelperText,
                             style: TextStyle(color: textColor),
                           ),
                         ),
