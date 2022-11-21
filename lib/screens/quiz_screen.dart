@@ -1,6 +1,5 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:encuesta/config/routes/routes.dart';
-import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/question_options_list_widget.dart';
 import 'package:encuesta/widgets/quiz_question_canvas_widget.dart';
@@ -26,8 +25,10 @@ class _QuizScreenState extends State<QuizScreen> {
             const QuizScreenHeadWidget(
                 quizName: "Quiz Name", questionNo: "01", totalQuestion: "20"),
             const QuizQuestionCanvas(question: "What is the capital of India?"),
-            const QuizTimerWidget(duration: 60),
-            const QuestionOptionsWidget(options: optionsTextHelpers),
+             QuizTimerWidget(duration: 60, onTimeOut: () {
+              print("Time Out");
+            }),
+            const QuestionOptionsWidget(options: optionsTextHelpers,isTimeOut: false,),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child:

@@ -1,10 +1,10 @@
-import 'package:encuesta/config/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 
 class QuizTimerWidget extends StatelessWidget {
-  const QuizTimerWidget({super.key, required this.duration});
+  const QuizTimerWidget({super.key, required this.duration, required this.onTimeOut});
   final int duration;
+  final VoidCallback onTimeOut;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -33,9 +33,7 @@ class QuizTimerWidget extends StatelessWidget {
             ],
           ),
           interval: const Duration(milliseconds: 100),
-          onFinished: () {
-            print('Timer is done!');
-          },
+          onFinished:onTimeOut,
         ));
   }
 }
