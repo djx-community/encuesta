@@ -18,6 +18,20 @@ class _HostingScreenState extends State<HostingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        shadowColor: Colors.transparent,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+            )),
+        title: UserIdAppCardWidget(),
+        centerTitle: true,
+      ),
       body: SafeArea(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -26,11 +40,6 @@ class _HostingScreenState extends State<HostingScreen> {
             height: 10,
             width: double.infinity,
           ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(60, 0, 60, 0),
-            child: UserIdAppCardWidget(),
-          ),
-          const SizedBox(height: 1),
           const Text(
             quizConfigurationHelperText,
             style: TextStyle(fontSize: 27, fontWeight: FontWeight.w400),
