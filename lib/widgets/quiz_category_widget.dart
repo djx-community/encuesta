@@ -1,5 +1,6 @@
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:flutter/material.dart';
+
 class QuizCategoryListWidget extends StatefulWidget {
   const QuizCategoryListWidget({super.key, required this.categoryList});
   final List categoryList;
@@ -48,6 +49,7 @@ class _QuizCategoryListWidgetState extends State<QuizCategoryListWidget> {
         },
         separatorBuilder: (BuildContext context, int index) => const Divider(
           color: Colors.white,
+          height: 10,
         ),
       ),
     );

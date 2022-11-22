@@ -18,15 +18,28 @@ class _HostingScreenState extends State<HostingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        shadowColor: Colors.transparent,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+            )),
+        title: UserIdAppCardWidget(),
+        centerTitle: true,
+      ),
       body: SafeArea(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.fromLTRB(60, 0, 60, 0),
-            child: UserIdAppCardWidget(),
+          const SizedBox(
+            height: 10,
+            width: double.infinity,
           ),
-          const SizedBox(height: 1),
           const Text(
             quizConfigurationHelperText,
             style: TextStyle(fontSize: 27, fontWeight: FontWeight.w400),
@@ -80,7 +93,9 @@ class _HostingScreenState extends State<HostingScreen> {
                         IconButton(
                             onPressed: () {
                               setState(() {
-                                _noOfQuestions++;
+                                if (_noOfQuestions < 20) {
+                                  _noOfQuestions++;
+                                }
                               });
                             },
                             icon: const Icon(Icons.add)),
@@ -101,7 +116,7 @@ class _HostingScreenState extends State<HostingScreen> {
                             onPressed: () {
                               setState(() {
                                 if (_timer >= 6) {
-                                  _timer--;
+                                  _timer = _timer - 5;
                                 }
                               });
                             },
@@ -113,7 +128,9 @@ class _HostingScreenState extends State<HostingScreen> {
                         IconButton(
                             onPressed: () {
                               setState(() {
-                                _timer = _timer + 5;
+                                if (_timer < 300) {
+                                  _timer = _timer + 5;
+                                }
                               });
                             },
                             icon: const Icon(Icons.add)),
@@ -155,11 +172,10 @@ class _HostingScreenState extends State<HostingScreen> {
                               minimumSize: const Size(120, 40),
                               backgroundColor: PRIMARY_COLOR),
                           onPressed: () {
-                            Navigator.pushNamed(
-                                context, joinedRoomScreenRoute);
+                            Navigator.pushNamed(context, joinedRoomScreenRoute);
                           },
                           child: const Text(
-                            nextHelperText,
+                            hostHelperText,
                             style: TextStyle(color: textColor),
                           ),
                         ),

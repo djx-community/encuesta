@@ -18,7 +18,7 @@ const quizConfigurationHelperText = "Quiz Configuration";
 const difficultyLevelHelperText = "Select Difficulty Level";
 const timerTextHelper = 'Timer';
 const noOfQuestionsTextHelper = 'No. Of Questions';
-const questionHelperText="Question";
+const questionHelperText = "Question";
 const categoryHelperText = 'Select Category';
 const nextHelperText = 'Next';
 const quitQuizHelperText = 'Quit Quiz';
@@ -42,6 +42,7 @@ const waitingForPlayersHelperText = 'Waiting For the Host to Start the Game';
 const joinRoomHelperText = 'Join Room';
 const hostRoomHelperText = 'Host Room';
 const gameScreenHelperText = 'Game Screen';
+const hostHelperText = 'Host';
 
 //Leader Board Assets
 const profilePic1 =
@@ -120,4 +121,4 @@ final joinedPlayersId = [
   'idq2311'
 ];
 
- const optionsTextHelpers = ['Delhi', 'Kerala', 'Karnadaka', 'Tamil Nadu'];
+const optionsTextHelpers = ['Delhi', 'Kerala', 'Karnadaka', 'Tamil Nadu'];
