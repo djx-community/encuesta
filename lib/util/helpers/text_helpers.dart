@@ -43,6 +43,8 @@ const joinRoomHelperText = 'Join Room';
 const hostRoomHelperText = 'Host Room';
 const gameScreenHelperText = 'Game Screen';
 const hostHelperText = 'Host';
+const creditHelperText = 'Credit';
+const exitHelperText = 'Exit';
 
 //Leader Board Assets
 const profilePic1 =

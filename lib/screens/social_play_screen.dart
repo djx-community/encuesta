@@ -4,7 +4,7 @@ import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/screens/hosting_screen.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/custom_buttons_widgets.dart';
-import 'package:encuesta/widgets/nav_bar.dart';
+import 'package:encuesta/widgets/bottom_app_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 class SocialPlayScreen extends StatelessWidget {
@@ -13,7 +13,7 @@ class SocialPlayScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: const navBars(),
+        bottomNavigationBar: const BottomAppBarWidget(),
         appBar: AppBar(
           backgroundColor: Colors.white,
           shadowColor: Colors.transparent,
