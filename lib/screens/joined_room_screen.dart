@@ -36,6 +36,7 @@ class _JoinedRoomScreenState extends State<JoinedRoomScreen> {
           ),
           const SizedBox(height: 20),
           SizedBox(
+            width: 350,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
               child: Column(
