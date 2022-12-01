@@ -1,5 +1,6 @@
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
+import 'package:encuesta/widgets/alert_dialogs_widgets.dart';
 import 'package:flutter/material.dart';
 
 class UserIdAppCardWidget extends StatelessWidget {
@@ -28,7 +29,9 @@ class UserIdAppCardWidget extends StatelessWidget {
             Row(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // generalAlertDialog(context,alertHelperText,alertMessageHelperText,true);
+                    },
                   icon: const Icon(Icons.copy,color: textColor,),
                   iconSize: 20,
                 ),

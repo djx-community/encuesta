@@ -45,6 +45,8 @@ const gameScreenHelperText = 'Game Screen';
 const hostHelperText = 'Host';
 const creditHelperText = 'Credit';
 const exitHelperText = 'Exit';
+const alertHelperText = 'Alert';
+const alertMessageHelperText = 'Are you sure you want to exit?';
 
 //Leader Board Assets
 const profilePic1 =
