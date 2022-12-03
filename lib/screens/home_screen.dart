@@ -6,6 +6,7 @@ import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/custom_buttons_widgets.dart';
 import 'package:encuesta/widgets/bottom_app_bar_widget.dart';
 import 'package:encuesta/widgets/user_id_app_card_widget.dart';
+import 'package:encuesta/widgets/user_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,15 +16,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         bottomNavigationBar: const BottomAppBarWidget(),
         body: SafeArea(
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 10,
-                width: double.infinity,
-              ),
-            Container(
-                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-                child: const UserIdAppCardWidget()),
+          child: Column(children: [
+            const SizedBox(
+              height: 10,
+              width: double.infinity,
+            ),
+            const UserWidget(),
             const Image(image: AssetImage(homeScreenImage)),
             const Text(letsHackHelperText,
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400)),
