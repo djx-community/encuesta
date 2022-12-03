@@ -1,6 +1,6 @@
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
-import 'package:encuesta/widgets/alert_dialogs_widgets.dart';
+import 'package:encuesta/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class UserIdAppCardWidget extends StatelessWidget {
@@ -30,6 +30,7 @@ class UserIdAppCardWidget extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {
+                       generalSnackBar(context,"ID Copied 20202");
                     // generalAlertDialog(context,alertHelperText,alertMessageHelperText,true);
                     },
                   icon: const Icon(Icons.copy,color: textColor,),
