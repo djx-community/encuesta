@@ -25,6 +25,7 @@ const quitQuizHelperText = 'Quit Quiz';
 const startHelperText = 'Start';
 const specialHelperText = 'Special';
 const cancelHelperText = 'Cancel';
+const confirmHelperText = 'Confirm';
 const socialPlayHelperText = 'Social Play';
 const singlePlayerHelperText = 'Single Player';
 const quickPlayHelperText = 'Quick Play';
