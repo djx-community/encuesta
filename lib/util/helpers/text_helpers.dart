@@ -48,7 +48,9 @@ const creditHelperText = 'Credit';
 const exitHelperText = 'Exit';
 const alertHelperText = 'Alert';
 const alertMessageHelperText = 'Are you sure you want to exit?';
-const usernameHelperText = 'AbdulSamad';
+const userNameHelperText = 'Username';
+const editProfileHelperText = 'Edit Profile';
+const saveHelperText = 'Save';
 
 //Leader Board Assets
 const profilePic1 =

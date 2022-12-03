@@ -11,6 +11,7 @@ Future<void> profileEditAlertDialog(
         title: Text(title),
         content: SingleChildScrollView(
           child: ListBody(
+            mainAxis: Axis.vertical,
             children: <Widget>[
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -18,9 +19,9 @@ Future<void> profileEditAlertDialog(
                   Stack(
                       alignment: AlignmentDirectional.center,
                       children: <Widget>[
-                        Opacity(
-                          opacity: 0.5,
-                          child: CircleAvatar(
+                       const Opacity(
+                          opacity: 0.7,
+                          child:CircleAvatar(
                             radius: 50,
                             backgroundImage: NetworkImage(profilePic1),
                             foregroundColor: Colors.black,
@@ -28,21 +29,21 @@ Future<void> profileEditAlertDialog(
                         ),
                         IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.camera_alt),
+                          icon:const Icon(Icons.camera_alt),
                           color: Colors.black,
                         ),
                       ]),
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               TextField(
-                controller: TextEditingController(text: usernameHelperText),
+                controller: TextEditingController(text: users[1]),
                 maxLength: 14,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Username',
+                  labelText:userNameHelperText,
                 ),
               )
             ],
@@ -51,14 +52,14 @@ Future<void> profileEditAlertDialog(
         actions: <Widget>[
           cancelButton
               ? TextButton(
-                  child: const Text('Cancel'),
+                  child: const Text(cancelHelperText),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
                 )
               : const SizedBox(),
           TextButton(
-            child: const Text('Save'),
+            child: const Text(saveHelperText),
             onPressed: () {
               Navigator.of(context).pop();
             },
