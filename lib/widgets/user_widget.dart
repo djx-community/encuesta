@@ -1,5 +1,6 @@
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
+import 'package:encuesta/widgets/profile_edit_alert_widget.dart';
 import 'package:flutter/material.dart';
 
 class UserWidget extends StatelessWidget {
@@ -8,7 +9,9 @@ class UserWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        profileEditAlertDialog(context, 'Edit Profile', true);
+      },
       child: SizedBox(
         width: 200,
         child: Card(
@@ -24,7 +27,7 @@ class UserWidget extends StatelessWidget {
                 backgroundImage: NetworkImage(profilePic1),
               ),
               const Text(
-                userIDHelperText,
+                usernameHelperText,
                 style: TextStyle(fontSize: 15),
               ),
               const SizedBox(
