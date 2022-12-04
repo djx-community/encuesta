@@ -2,6 +2,7 @@ import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/user_id_app_card_widget.dart';
+import 'package:encuesta/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:progress_indicators/progress_indicators.dart';
 
@@ -119,7 +120,14 @@ class _JoinedRoomScreenState extends State<JoinedRoomScreen> {
                 height: 50,
               ),
               OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    generalAlertDialog(
+                        context,
+                        'Exit Room',
+                        'Do you want to exit the lobby?',
+                        true,
+                        homeScreenRoute);
+                  },
                   style: OutlinedButton.styleFrom(
                       minimumSize: const Size(120, 40),
                       side: const BorderSide(
