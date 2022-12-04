@@ -10,10 +10,10 @@ class UserWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        profileEditAlertDialog(context, 'Edit Profile', true);
+        profileEditAlertDialog(context, editProfileHelperText, true);
       },
       child: SizedBox(
-        width: 200,
+        width: 250,
         child: Card(
           color: PRIMARY_COLOR,
           shape: const RoundedRectangleBorder(
@@ -26,9 +26,9 @@ class UserWidget extends StatelessWidget {
                 radius: 25,
                 backgroundImage: NetworkImage(profilePic1),
               ),
-              const Text(
-                usernameHelperText,
-                style: TextStyle(fontSize: 15),
+              Text(
+                users[1],
+                style: const TextStyle(fontSize: 15),
               ),
               const SizedBox(
                 width: 10,
