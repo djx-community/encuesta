@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
               buttonText: singlePlayerHelperText,
               buttonTextColor: textColor,
               onPress: () {
-                Navigator.pushNamed(context, hostingScreenRoute);
+                Navigator.pushNamed(context, singlePlayerConfigScreenRoute);
               },
             ),
           ]),

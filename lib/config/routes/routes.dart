@@ -10,3 +10,5 @@ const quizScreenRoute = '/quiz';
 const joinedRoomScreenRoute = '/joined-room';
 const socialPlayScreenRoute = '/social-play';
 const hostViewOfGameScreenRoute = '/host-view-of-game';
+const singlePlayerConfigScreenRoute = '/single-player-config';
+const singlePlayerGameScreenRoute = '/single-player-game';
