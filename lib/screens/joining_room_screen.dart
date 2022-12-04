@@ -15,11 +15,11 @@ class JoiningRoomScreen extends StatefulWidget {
 }
 
 class _JoiningRoomScreenState extends State<JoiningRoomScreen> {
-  @override
-  void initState() {
-    super.initState();
-    // changeToQuizScreen(context);
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   changeToQuizScreen(context);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -200,6 +200,6 @@ class _JoiningRoomScreenState extends State<JoiningRoomScreen> {
 
   Future<void> changeToQuizScreen(context) async {
     await Future<dynamic>.delayed(const Duration(seconds: 3));
-    Navigator.of(context).pushReplacementNamed(quizScreenRoute);
+    // connectionLostAlertDialog(context, "Oops!!", "Couldn't Connect");
   }
 }

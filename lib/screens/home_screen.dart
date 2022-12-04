@@ -26,6 +26,8 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400)),
             const SizedBox(height: 20),
             CustomButton(
+              buttonWidth: 300,
+              buttonHeight: 50,
               onPress: () {
                 Navigator.push(
                   context,
