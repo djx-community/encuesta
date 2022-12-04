@@ -52,6 +52,7 @@ const userNameHelperText = 'Username';
 const editProfileHelperText = 'Edit Profile';
 const saveHelperText = 'Save';
 const password = 'encuesta01';
+const forfeitQuizHelperText = 'Forfeit Quiz';
 
 //Leader Board Assets
 const profilePic1 =
