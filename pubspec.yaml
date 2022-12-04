@@ -30,9 +30,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  # cupertino_icons: ^1.0.2
   timer_count_down: ^2.2.1
   progress_indicators: ^1.0.0
   dotted_line: ^3.1.0
@@ -66,6 +63,7 @@ flutter:
      - assets/images/game_loading.png
      - assets/images/home_screen.png
      - assets/images/social_play.png
+     - assets/images/offline.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
