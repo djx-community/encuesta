@@ -51,6 +51,7 @@ const alertMessageHelperText = 'Are you sure you want to exit?';
 const userNameHelperText = 'Username';
 const editProfileHelperText = 'Edit Profile';
 const saveHelperText = 'Save';
+const password = 'encuesta01';
 
 //Leader Board Assets
 const profilePic1 =
