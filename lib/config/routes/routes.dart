@@ -8,6 +8,7 @@ const hostingScreenRoute = '/hosting';
 const hostedLobbyScreenRoute = '/hosted-lobby';
 const quizScreenRoute = '/quiz';
 const joinedRoomScreenRoute = '/joined-room';
+const joiningRoomScreenRoute = '/joining-room';
 const socialPlayScreenRoute = '/social-play';
 const hostViewOfGameScreenRoute = '/host-view-of-game';
 const singlePlayerConfigScreenRoute = '/single-player-config';

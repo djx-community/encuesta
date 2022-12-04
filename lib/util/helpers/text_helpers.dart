@@ -41,6 +41,7 @@ const timeHelperText = '1 min';
 const timeLimitHelperText = 'Time Limit';
 const leaveRoomHelperText = 'Leave Room';
 const waitingForPlayersHelperText = 'Waiting for the Host to start the Game';
+const waitingParticipantHelperText = 'Waiting for the Participants to join.\n   Swipe to right see participants';
 const joinRoomHelperText = 'Join Room';
 const hostRoomHelperText = 'Host Room';
 const gameScreenHelperText = 'Game Screen';
