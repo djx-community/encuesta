@@ -13,7 +13,7 @@ class OfflineMessageScreen extends StatelessWidget {
         body: Column(
       children: [
         Container(
-          padding:const EdgeInsets.only(top: 100),
+            padding: const EdgeInsets.only(top: 100),
             width: double.infinity,
             child: Image.asset(
               offlineImage,
@@ -32,7 +32,9 @@ class OfflineMessageScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
-               SizedBox(height: 2,),
+              SizedBox(
+                height: 2,
+              ),
               Text(
                 offlineMessageHelperText,
                 textAlign: TextAlign.left,
@@ -45,6 +47,8 @@ class OfflineMessageScreen extends StatelessWidget {
           height: 50,
         ),
         CustomButton(
+            buttonWidth: 300,
+            buttonHeight: 50,
             buttonText: tryAgainHelperText,
             buttonTextColor: textColor,
             buttonColor: tertiaryColor,
