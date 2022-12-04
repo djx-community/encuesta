@@ -5,7 +5,6 @@ import 'package:encuesta/screens/hosting_screen.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/custom_buttons_widgets.dart';
 import 'package:encuesta/widgets/bottom_app_bar_widget.dart';
-import 'package:encuesta/widgets/user_id_app_card_widget.dart';
 import 'package:encuesta/widgets/user_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +54,7 @@ class HomeScreen extends StatelessWidget {
               buttonText: singlePlayerHelperText,
               buttonTextColor: textColor,
               onPress: () {
-                Navigator.pushNamed(context, hostingScreenRoute);
+                Navigator.pushNamed(context, singlePlayerConfigScreenRoute);
               },
             ),
           ]),

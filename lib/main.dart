@@ -8,6 +8,8 @@ import 'package:encuesta/screens/hosting_screen.dart';
 import 'package:encuesta/screens/joined_room_screen.dart';
 import 'package:encuesta/screens/leader_board_screen.dart';
 import 'package:encuesta/screens/lobby_screen.dart';
+import 'package:encuesta/screens/single_player_config_screen.dart';
+import 'package:encuesta/screens/single_player_game_screen.dart';
 import 'package:encuesta/screens/social_play_screen.dart';
 import 'package:encuesta/screens/quiz_screen.dart';
 import 'package:encuesta/screens/splash_screen.dart';
@@ -41,6 +43,8 @@ class MyApp extends StatelessWidget {
           joinedRoomScreenRoute: (context) => const JoinedRoomScreen(),
           socialPlayScreenRoute: (context) => const SocialPlayScreen(),
           hostViewOfGameScreenRoute: (context) => const HostViewOfGameScreen(),
+          singlePlayerConfigScreenRoute: (context) =>const SinglePlayerConfigScreen(),
+          singlePlayerGameScreenRoute: (context) =>const SinglePlayerGameScreen(),
         });
   }
 }

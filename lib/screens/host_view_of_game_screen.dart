@@ -1,3 +1,4 @@
+import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/point_table_widget.dart';
@@ -6,6 +7,7 @@ import 'package:encuesta/widgets/quiz_question_canvas_widget.dart';
 import 'package:encuesta/widgets/quiz_screen_head_widget.dart';
 import 'package:encuesta/widgets/quiz_timer_widget.dart';
 import 'package:encuesta/widgets/user_id_app_card_widget.dart';
+import 'package:encuesta/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class HostViewOfGameScreen extends StatefulWidget {
@@ -33,7 +35,7 @@ class _HostViewOfGameScreenState extends State<HostViewOfGameScreen> {
               labelColor: textColor,
               tabs: <Widget>[
                 Tab(icon: Icon(Icons.quiz)),
-                Tab( icon: Icon(Icons.leaderboard)),
+                Tab(icon: Icon(Icons.leaderboard)),
               ],
             ),
           ),
@@ -66,14 +68,20 @@ class _HostViewOfGameScreenState extends State<HostViewOfGameScreen> {
                     padding: const EdgeInsets.all(15.0),
                     child: OutlinedButton(
                         onPressed: () {
-                          // Navigator.of(context).pushNamed(homeScreenRoute);
+                          // forfeit room
+                          generalAlertDialog(
+                              context,
+                              forfeitQuizHelperText,
+                              'Do you want to forfeit the quiz?',
+                              true,
+                              socialPlayScreenRoute);
                         },
                         style: OutlinedButton.styleFrom(
                             minimumSize: const Size(120, 40),
                             side: const BorderSide(
                                 color: negativeButtonBorderColor)),
                         child: const Text(
-                          quitQuizHelperText,
+                          forfeitQuizHelperText,
                           style: TextStyle(color: negativeButtonBorderColor),
                         )),
                   )
