@@ -31,7 +31,9 @@ class MyApp extends StatelessWidget {
             textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Serif')),
         initialRoute: splashScreenRoute,
         routes: {
-          splashScreenRoute: (context) => const SplashScreen(),
+          // splashScreenRoute: (context) => const SplashScreen(),
+          splashScreenRoute: (context) => const
+          SocialPlayScreen(),
           homeScreenRoute: (context) => const HomeScreen(),
           winningScreenRoute: (context) => const WinningScreen(),
           failedScreenRoute: (context) => const FailedScreen(),
@@ -43,10 +45,8 @@ class MyApp extends StatelessWidget {
           joinedRoomScreenRoute: (context) => const JoinedRoomScreen(),
           socialPlayScreenRoute: (context) => const SocialPlayScreen(),
           hostViewOfGameScreenRoute: (context) => const HostViewOfGameScreen(),
-          singlePlayerConfigScreenRoute: (context) =>
-              const SinglePlayerConfigScreen(),
-          singlePlayerGameScreenRoute: (context) =>
-              const SinglePlayerGameScreen(),
+          singlePlayerConfigScreenRoute: (context) =>const SinglePlayerConfigScreen(),
+          singlePlayerGameScreenRoute: (context) =>const SinglePlayerGameScreen(),
         });
   }
 }

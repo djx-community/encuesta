@@ -52,7 +52,9 @@ const userNameHelperText = 'Username';
 const editProfileHelperText = 'Edit Profile';
 const saveHelperText = 'Save';
 const password = 'encuesta01';
+const passwordHelperText= 'Password';
 const forfeitQuizHelperText = 'Forfeit Quiz';
+const roomIdHelperText = 'Room ID';
 
 //Leader Board Assets
 const profilePic1 =

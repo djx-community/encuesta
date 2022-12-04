@@ -1,4 +1,5 @@
 import 'package:encuesta/config/routes/routes.dart';
+import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/question_options_list_widget.dart';
 import 'package:encuesta/widgets/quiz_question_canvas_widget.dart';
@@ -45,10 +46,10 @@ class _SinglePlayerGameScreenState extends State<SinglePlayerGameScreen> {
                     },
                     style: OutlinedButton.styleFrom(
                         minimumSize: const Size(120, 40),
-                        side: const BorderSide(color: Colors.red, width: 1)),
+                        side: const BorderSide(color: negativeButtonBorderColor, width: 1)),
                     child: const Text(
                       quitQuizHelperText,
-                      style: TextStyle(color: Colors.red),
+                      style: TextStyle(color: negativeButtonBorderColor),
                     )),
                 const SizedBox(
                   width: 40,
@@ -56,14 +57,13 @@ class _SinglePlayerGameScreenState extends State<SinglePlayerGameScreen> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       minimumSize: const Size(120, 40),
-                      backgroundColor:
-                          const Color.fromARGB(255, 214, 255, 252)),
+                      backgroundColor:PRIMARY_COLOR),
                   onPressed: () {
                     Navigator.of(context).pushNamed(winningScreenRoute);
                   },
                   child: const Text(
                     nextHelperText,
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color:textColor),
                   ),
                 ),
               ]),

@@ -1,11 +1,10 @@
 import 'package:encuesta/config/assets_path/assets_path.dart';
-import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/screens/hosting_screen.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/custom_buttons_widgets.dart';
 import 'package:encuesta/widgets/bottom_app_bar_widget.dart';
-import 'package:encuesta/widgets/join_room_alert_wodget.dart';
+import 'package:encuesta/widgets/join_room_alert_widget.dart';
 import 'package:flutter/material.dart';
 
 class SocialPlayScreen extends StatelessWidget {

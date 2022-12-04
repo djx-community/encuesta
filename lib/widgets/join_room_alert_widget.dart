@@ -1,4 +1,5 @@
 import 'package:encuesta/screens/joined_room_screen.dart';
+import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:flutter/material.dart';
 
 Future<void> joinRoomAlertDialog(
@@ -11,20 +12,20 @@ Future<void> joinRoomAlertDialog(
         title: Text(title),
         content: SingleChildScrollView(
           child: ListBody(
-            children: <Widget>[
+            children:const <Widget>[
               TextField(
-                decoration: const InputDecoration(
+                decoration:  InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Room ID',
+                  labelText: roomIdHelperText,
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
               TextField(
-                decoration: const InputDecoration(
+                decoration:  InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Password',
+                  labelText: passwordHelperText,
                 ),
               )
             ],
@@ -33,14 +34,14 @@ Future<void> joinRoomAlertDialog(
         actions: <Widget>[
           cancelButton
               ? TextButton(
-                  child: const Text('Cancel'),
+                  child: const Text(cancelHelperText),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
                 )
               : const SizedBox(),
           TextButton(
-            child: const Text('Join'),
+            child: const Text(joinRoomHelperText),
             onPressed: () {
               Navigator.push(
                   context,

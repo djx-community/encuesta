@@ -30,7 +30,7 @@ class _SinglePlayerConfigScreenState extends State<SinglePlayerConfigScreen> {
               Icons.arrow_back_ios,
               color: Colors.black,
             )),
-        title: UserWidget(),
+        title:const UserWidget(),
         centerTitle: true,
       ),
       body: SafeArea(
