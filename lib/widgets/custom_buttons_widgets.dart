@@ -1,5 +1,4 @@
 import 'package:encuesta/config/themes/themes.dart';
-import 'package:encuesta/screens/winning_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
