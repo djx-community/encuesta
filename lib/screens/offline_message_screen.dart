@@ -10,50 +10,52 @@ class OfflineMessageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: [
-        Container(
-            padding: const EdgeInsets.only(top: 100),
-            width: double.infinity,
-            child: Image.asset(
-              offlineImage,
-              width: 300,
-              height: 300,
-              alignment: Alignment.center,
-            )),
-        const SizedBox(
-          height: 10,
-        ),
-        SizedBox(
+        body: SafeArea(
           child: Column(
-            children: const <Widget>[
-              Text(
-                offlineHelperText,
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 2,
-              ),
-              Text(
-                offlineMessageHelperText,
-                textAlign: TextAlign.left,
-                style: TextStyle(fontSize: 15, color: secondaryColor),
-              ),
-            ],
+              children: [
+          Container(
+              padding: const EdgeInsets.only(top: 100),
+              width: double.infinity,
+              child: Image.asset(
+                offlineImage,
+                width: 300,
+                height: 300,
+                alignment: Alignment.center,
+              )),
+          const SizedBox(
+            height: 10,
           ),
-        ),
-        const SizedBox(
-          height: 50,
-        ),
-        CustomButton(
-            buttonWidth: 300,
-            buttonHeight: 50,
-            buttonText: tryAgainHelperText,
-            buttonTextColor: textColor,
-            buttonColor: tertiaryColor,
-            onPress: () {})
-      ],
-    ));
+          SizedBox(
+            child: Column(
+              children: const <Widget>[
+                Text(
+                  offlineHelperText,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                Text(
+                  offlineMessageHelperText,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 15, color: secondaryColor),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          CustomButton(
+              buttonWidth: 300,
+              buttonHeight: 50,
+              buttonText: tryAgainHelperText,
+              buttonTextColor: textColor,
+              buttonColor: tertiaryColor,
+              onPress: () {})
+              ],
+            ),
+        ));
   }
 }

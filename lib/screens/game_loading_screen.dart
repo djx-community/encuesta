@@ -1,9 +1,7 @@
 import 'package:encuesta/config/assets_path/assets_path.dart';
-import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/greeting_screen_image_widget.dart';
 import 'package:encuesta/widgets/progression_bar_widget.dart';
-import 'package:encuesta/widgets/score_display_widget.dart';
 import 'package:flutter/material.dart';
 
 class GameLoadingScreen extends StatefulWidget {
