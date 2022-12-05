@@ -25,76 +25,78 @@ class _HostViewOfGameScreenState extends State<HostViewOfGameScreen> {
     return MaterialApp(
       home: DefaultTabController(
         length: 2,
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: APP_COLOR,
-            centerTitle: true,
-            title: const UserIdAppCardWidget(),
-            bottom: const TabBar(
-              indicatorColor: tabIndicatorColor,
-              labelColor: textColor,
-              tabs: <Widget>[
-                Tab(icon: Icon(Icons.quiz)),
-                Tab(icon: Icon(Icons.leaderboard)),
-              ],
-            ),
-          ),
-          body: TabBarView(
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  const QuizScreenHeadWidget(
-                      quizName: "Quiz Name",
-                      questionNo: "01",
-                      totalQuestion: "20"),
-                  const SizedBox(
-                    height: 200,
-                    child: QuizQuestionCanvas(
-                        question: "What is the capital of India?"),
-                  ),
-                  QuizTimerWidget(
-                      duration: 10,
-                      onTimeOut: () {
-                        setState(() {
-                          _isTimeOut = true;
-                        });
-                      }),
-                  QuestionOptionsWidget(
-                    options: optionsTextHelpers,
-                    isTimeOut: _isTimeOut,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: OutlinedButton(
-                        onPressed: () {
-                          // forfeit room
-                          generalAlertDialog(
-                              context,
-                              forfeitQuizHelperText,
-                              'Do you want to forfeit the quiz?',
-                              true,
-                              socialPlayScreenRoute);
-                        },
-                        style: OutlinedButton.styleFrom(
-                            minimumSize: const Size(120, 40),
-                            side: const BorderSide(
-                                color: negativeButtonBorderColor)),
-                        child: const Text(
-                          forfeitQuizHelperText,
-                          style: TextStyle(color: negativeButtonBorderColor),
-                        )),
-                  )
+        child: SafeArea(
+          child: Scaffold(
+            appBar: AppBar(
+              backgroundColor: APP_COLOR,
+              centerTitle: true,
+              title: const UserIdAppCardWidget(),
+              bottom: const TabBar(
+                indicatorColor: tabIndicatorColor,
+                labelColor: textColor,
+                tabs: <Widget>[
+                  Tab(icon: Icon(Icons.quiz)),
+                  Tab(icon: Icon(Icons.leaderboard)),
                 ],
               ),
-              Expanded(
-                  child: Container(
-                      margin: const EdgeInsets.fromLTRB(10, 1, 10, 0),
-                      child: PointTableWidget(
-                        users: users,
-                        points: points,
-                      ))),
-            ],
+            ),
+            body: TabBarView(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    const QuizScreenHeadWidget(
+                        quizName: "Quiz Name",
+                        questionNo: "01",
+                        totalQuestion: "20"),
+                    const SizedBox(
+                      height: 200,
+                      child: QuizQuestionCanvas(
+                          question: "What is the capital of India?"),
+                    ),
+                    QuizTimerWidget(
+                        duration: 10,
+                        onTimeOut: () {
+                          setState(() {
+                            _isTimeOut = true;
+                          });
+                        }),
+                    QuestionOptionsWidget(
+                      options: optionsTextHelpers,
+                      isTimeOut: _isTimeOut,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: OutlinedButton(
+                          onPressed: () {
+                            // forfeit room
+                            generalAlertDialog(
+                                context,
+                                forfeitQuizHelperText,
+                                'Do you want to forfeit the quiz?',
+                                true,
+                                socialPlayScreenRoute);
+                          },
+                          style: OutlinedButton.styleFrom(
+                              minimumSize: const Size(120, 40),
+                              side: const BorderSide(
+                                  color: negativeButtonBorderColor)),
+                          child: const Text(
+                            forfeitQuizHelperText,
+                            style: TextStyle(color: negativeButtonBorderColor),
+                          )),
+                    )
+                  ],
+                ),
+                Expanded(
+                    child: Container(
+                        margin: const EdgeInsets.fromLTRB(10, 1, 10, 0),
+                        child: PointTableWidget(
+                          users: users,
+                          points: points,
+                        ))),
+              ],
+            ),
           ),
         ),
       ),
