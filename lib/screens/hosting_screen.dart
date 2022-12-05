@@ -29,7 +29,7 @@ class _HostingScreenState extends State<HostingScreen> {
               Icons.arrow_back_ios,
               color: Colors.black,
             )),
-        title: UserIdAppCardWidget(),
+        title:const UserIdAppCardWidget(),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -172,7 +172,7 @@ class _HostingScreenState extends State<HostingScreen> {
                               minimumSize: const Size(120, 40),
                               backgroundColor: PRIMARY_COLOR),
                           onPressed: () {
-                            Navigator.pushNamed(context, joinedRoomScreenRoute);
+                            Navigator.pushNamed(context, joiningRoomScreenRoute);
                           },
                           child: const Text(
                             hostHelperText,

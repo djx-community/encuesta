@@ -1,4 +1,5 @@
 import 'package:encuesta/config/assets_path/assets_path.dart';
+import 'package:encuesta/screens/offline_message_screen.dart';
 
 const appName = "Encuesta";
 const developedBy = "Powered By DJX Community";
@@ -40,6 +41,7 @@ const timeHelperText = '1 min';
 const timeLimitHelperText = 'Time Limit';
 const leaveRoomHelperText = 'Leave Room';
 const waitingForPlayersHelperText = 'Waiting for the Host to start the Game';
+const waitingParticipantHelperText = 'Waiting for the Participants to join.\n   Swipe to right see participants';
 const joinRoomHelperText = 'Join Room';
 const hostRoomHelperText = 'Host Room';
 const gameScreenHelperText = 'Game Screen';
@@ -55,7 +57,9 @@ const password = 'encuesta01';
 const passwordHelperText= 'Password';
 const forfeitQuizHelperText = 'Forfeit Quiz';
 const roomIdHelperText = 'Room ID';
-
+const offlineHelperText="You are offline";
+const offlineMessageHelperText="It seems there is a problem with your internet connection.\nPlease check your connection and try again";
+const tryAgainHelperText="Try Again";
 //Leader Board Assets
 const profilePic1 =
     "https://media.istockphoto.com/photos/headshot-portrait-of-smiling-male-employee-in-office-picture-id1309328823?b=1&k=20&m=1309328823&s=170667a&w=0&h=a-f8vR5TDFnkMY5poQXfQhDSnK1iImIfgVTVpFZi_KU=";

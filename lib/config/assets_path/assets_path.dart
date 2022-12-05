@@ -4,3 +4,4 @@ const failedImage = "assets/images/fail_image.webp";
 const homeScreenImage = "assets/images/home_screen.png";
 const gameLoadingImage = "assets/images/game_loading.png";
 const socialPlayImage = "assets/images/social_play.png";
+const offlineImage="assets/images/offline.jpg";

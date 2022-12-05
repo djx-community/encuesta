@@ -42,6 +42,8 @@ class SocialPlayScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       CustomButton(
+                        buttonHeight: 50,
+                        buttonWidth: 300,
                         onPress: () {
                           Navigator.push(
                             context,

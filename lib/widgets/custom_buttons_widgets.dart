@@ -1,5 +1,4 @@
 import 'package:encuesta/config/themes/themes.dart';
-import 'package:encuesta/screens/winning_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -7,6 +6,8 @@ class CustomButton extends StatelessWidget {
   final String buttonText;
   final Color buttonColor;
   final Color buttonTextColor;
+  final double buttonWidth;
+  final double buttonHeight;
   // final BorderRadius button_border;
   // final Widget child;
 
@@ -16,8 +17,8 @@ class CustomButton extends StatelessWidget {
     required this.buttonText,
     required this.buttonTextColor,
     required this.buttonColor,
-    // required this.button_border,
-    // required this.child
+    required this.buttonWidth,
+    required this.buttonHeight
   });
 
   @override
@@ -25,7 +26,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPress,
       style: ElevatedButton.styleFrom(
-        minimumSize: const Size(300, 50),
+        minimumSize:  Size(buttonWidth, buttonHeight),
         backgroundColor: buttonColor,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(10)),
