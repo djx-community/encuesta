@@ -17,7 +17,7 @@ class _JoinedRoomScreenState extends State<JoinedRoomScreen> {
   @override
   void initState() {
     super.initState();
-    changeToQuizScreen(context);
+    // changeToQuizScreen(context);
   }
 
   @override

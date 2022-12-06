@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
               buttonWidth: 300,
               buttonHeight: 50,
               onPress: () {
-                Navigator.of(context).pushNamed(hostingScreenRoute);
+                Navigator.of(context).pushNamed(gameLoadingScreenRoute);
               },
               buttonText: quickPlayHelperText,
               buttonColor: PRIMARY_COLOR,
