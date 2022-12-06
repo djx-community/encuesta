@@ -1,3 +1,4 @@
+import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/screens/joined_room_screen.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:flutter/material.dart';
@@ -43,10 +44,7 @@ Future<void> joinRoomAlertDialog(
           TextButton(
             child: const Text(joinRoomHelperText),
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: ((context) => const JoinedRoomScreen())));
+              Navigator.of(context).pushNamed(joinedRoomScreenRoute);
             },
           ),
         ],

@@ -45,7 +45,7 @@ Future<void> generalAlertDialog(BuildContext context, String title,
           TextButton(
             child: const Text(confirmHelperText),
             onPressed: () {
-              Navigator.pushNamed(context, route);
+              Navigator.of(context).pushNamed(route);
             },
           ),
         ],
@@ -91,7 +91,7 @@ Future<void> connectionLostAlertDialog(
                 buttonTextColor: textColor,
                 buttonWidth: 100,
                 buttonHeight: 40,
-                onPress: () {Navigator.pop(context);},
+                onPress: () {Navigator.of(context).pop();},
               ),
               const SizedBox(width: 10),
               CustomButton(

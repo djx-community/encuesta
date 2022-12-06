@@ -29,11 +29,7 @@ class HomeScreen extends StatelessWidget {
               buttonWidth: 300,
               buttonHeight: 50,
               onPress: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const HostingScreen()),
-                );
+                Navigator.of(context).pushNamed(hostingScreenRoute);
               },
               buttonText: quickPlayHelperText,
               buttonColor: PRIMARY_COLOR,
@@ -46,7 +42,7 @@ class HomeScreen extends StatelessWidget {
               buttonText: socialPlayHelperText,
               buttonTextColor: textColor,
               onPress: () {
-                Navigator.pushNamed(context, socialPlayScreenRoute);
+                Navigator.of(context).pushNamed(socialPlayScreenRoute);
               },
             ),
             const SizedBox(
@@ -56,7 +52,7 @@ class HomeScreen extends StatelessWidget {
               buttonText: singlePlayerHelperText,
               buttonTextColor: textColor,
               onPress: () {
-                Navigator.pushNamed(context, singlePlayerConfigScreenRoute);
+                Navigator.of(context).pushNamed(singlePlayerConfigScreenRoute);
               },
             ),
           ]),

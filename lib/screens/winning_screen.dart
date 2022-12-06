@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:encuesta/config/assets_path/assets_path.dart';
 import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';

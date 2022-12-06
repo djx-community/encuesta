@@ -1,4 +1,5 @@
 import 'package:encuesta/config/assets_path/assets_path.dart';
+import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/screens/hosting_screen.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
@@ -45,11 +46,7 @@ class SocialPlayScreen extends StatelessWidget {
                         buttonHeight: 50,
                         buttonWidth: 300,
                         onPress: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const HostingScreen()),
-                          );
+                          Navigator.of(context).pushNamed(hostingScreenRoute);
                         },
                         buttonText: hostRoomHelperText,
                         buttonColor: PRIMARY_COLOR,
@@ -63,7 +60,7 @@ class SocialPlayScreen extends StatelessWidget {
                         buttonTextColor: textColor,
                         onPress: () {
                           joinRoomAlertDialog(context, joinRoomHelperText,
-                              true); //need to add popup for entering room creddentials
+                              true); //need to add popup for entering room credentials
                         },
                       ),
                     ],

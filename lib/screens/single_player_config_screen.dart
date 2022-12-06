@@ -30,7 +30,7 @@ class _SinglePlayerConfigScreenState extends State<SinglePlayerConfigScreen> {
               Icons.arrow_back_ios,
               color: Colors.black,
             )),
-        title:const UserWidget(),
+        title: const UserWidget(),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -173,8 +173,8 @@ class _SinglePlayerConfigScreenState extends State<SinglePlayerConfigScreen> {
                               minimumSize: const Size(120, 40),
                               backgroundColor: PRIMARY_COLOR),
                           onPressed: () {
-                            Navigator.pushNamed(
-                                context, singlePlayerGameScreenRoute);
+                            Navigator.of(context)
+                                .pushNamed(singlePlayerGameScreenRoute);
                           },
                           child: const Text(
                             startHelperText,
