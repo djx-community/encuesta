@@ -36,6 +36,7 @@ const quizPoolHelperText = 'Quiz Pool';
 const easyHelperText = 'Easy';
 const selectedDifficultyLevelHelperText = 'Difficulty Level';
 const selectedCategoryHelperText = 'Category';
+const letsStartTheQuizHelperText="Let's Start The Quiz";
 const queNoHelperText = '30';
 const timeHelperText = '1 min';
 const timeLimitHelperText = 'Time Limit';
@@ -81,6 +82,9 @@ final users = [
   'user9',
   'user10',
   'user11'
+];
+const gameLoadingScreenCaptions=[
+"Stay Tuned...","Matching the game...","Loading the game...","Preparing the game..."
 ];
 final points = [100, 90, 80, 70, 40, 40, 30, 30, 20, 10, 10, 5];
 final difficultyLevel = ['Easy', 'Medium', 'Hard'];
