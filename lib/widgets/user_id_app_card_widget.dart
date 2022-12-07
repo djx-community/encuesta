@@ -1,9 +1,9 @@
+import 'package:clipboard/clipboard.dart';
 import 'package:encuesta/config/themes/themes.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/hosting_room_credential_edit_alert_widget.dart';
 import 'package:encuesta/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
 class UserIdAppCardWidget extends StatelessWidget {
@@ -13,15 +13,13 @@ class UserIdAppCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        hostingRoomAlertDialog(
-            context, 'Room Credentials', roomId, password, true);
-      },
+        hostingRoomAlertDialog( context, 'Room Credentials', roomId, password, true);},
       child: SizedBox(
         width: 300,
         child: GestureDetector(
           onLongPress: () {
-            generalSnackBar(context, copyToClipboardHelperText);
-            Clipboard.setData(const ClipboardData(text: userIDHelperText));
+            FlutterClipboard.copy(userIDHelperText).then(
+                (value) => generalSnackBar(context, copyToClipboardHelperText));
           },
           child: Card(
             color: PRIMARY_COLOR,
@@ -43,8 +41,9 @@ class UserIdAppCardWidget extends StatelessWidget {
                   children: [
                     IconButton(
                       onPressed: () {
-                        generalSnackBar(context, copyToClipboardHelperText);//to show copy to clipboard message
-                        Clipboard.setData(const ClipboardData(text: userIDHelperText)); //to copy the user id
+                        FlutterClipboard.copy(userIDHelperText).then((value) =>
+                            generalSnackBar(context,
+                                copyToClipboardHelperText)); //to copy the user id
                         // generalAlertDialog(context,alertHelperText,alertMessageHelperText,true);
                       },
                       icon: const Icon(
@@ -54,8 +53,9 @@ class UserIdAppCardWidget extends StatelessWidget {
                       iconSize: 20,
                     ),
                     IconButton(
-                      onPressed: ()async {
-                       await Share.share("${users[1]} share user id to you : $userIDHelperText"); //Share user id to someone
+                      onPressed: () async {
+                        await Share.share(
+                            "${users[1]} share user id to you : $userIDHelperText"); //Share user id to someone
                       },
                       icon: const Icon(
                         Icons.share,
