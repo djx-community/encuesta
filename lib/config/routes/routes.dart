@@ -14,3 +14,4 @@ const hostViewOfGameScreenRoute = '/host-view-of-game';
 const singlePlayerConfigScreenRoute = '/single-player-config';
 const singlePlayerGameScreenRoute = '/single-player-game';
 const offlineScreenRoute = '/offline';
+const quickPlayJoinedRoomRoute = '/quick-play-joined-room';

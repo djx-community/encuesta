@@ -172,7 +172,7 @@ class _HostingScreenState extends State<HostingScreen> {
                               minimumSize: const Size(120, 40),
                               backgroundColor: PRIMARY_COLOR),
                           onPressed: () {
-                            Navigator.pushNamed(context, joiningRoomScreenRoute);
+                            Navigator.of(context).pushNamed(joiningRoomScreenRoute);
                           },
                           child: const Text(
                             hostHelperText,

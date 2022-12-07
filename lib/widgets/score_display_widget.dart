@@ -1,4 +1,3 @@
-import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:flutter/material.dart';
 
 class ScoreDisplayWidget extends StatelessWidget {
@@ -13,13 +12,13 @@ class ScoreDisplayWidget extends StatelessWidget {
       children: [
         Text(
           liveScore,
-          style: TextStyle(
+          style:const TextStyle(
               fontWeight: FontWeight.bold, color: Colors.green, fontSize: 40),
         ),
-        Text('/',
+        const Text('/',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
         Text(gameScoreLimit,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30))
+            style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 30))
       ],
     );
   }

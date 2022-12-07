@@ -181,8 +181,8 @@ class _JoiningRoomScreenState extends State<JoiningRoomScreen> {
                                 minimumSize: const Size(120, 40),
                                 backgroundColor: PRIMARY_COLOR),
                             onPressed: () {
-                              Navigator.pushNamed(
-                                  context, hostViewOfGameScreenRoute);
+                              Navigator.of(context)
+                                  .pushNamed(hostViewOfGameScreenRoute);
                             },
                             child: const Text(
                               startHelperText,

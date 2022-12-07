@@ -1,5 +1,6 @@
 import 'package:encuesta/config/routes/routes.dart';
 import 'package:encuesta/config/themes/themes.dart';
+import 'package:encuesta/screens/hosting_screen.dart';
 import 'package:encuesta/util/helpers/text_helpers.dart';
 import 'package:encuesta/widgets/joined_players_list_widget.dart';
 import 'package:encuesta/widgets/user_id_app_card_widget.dart';
@@ -36,7 +37,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
               children: [
                 OutlinedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, hostingScreenRoute);
+                      Navigator.of(context).pushNamed(hostingScreenRoute);
                     },
                     style: OutlinedButton.styleFrom(
                         minimumSize: const Size(120, 40),
