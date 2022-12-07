@@ -13,9 +13,7 @@ class UserIdAppCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        hostingRoomAlertDialog(
-            context, 'Room Credentials', roomId, password, true);
-      },
+        hostingRoomAlertDialog( context, 'Room Credentials', roomId, password, true);},
       child: SizedBox(
         width: 300,
         child: GestureDetector(
