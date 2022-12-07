@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
               width: double.infinity,
             ),
             const UserWidget(),
-            const Image(image: AssetImage(homeScreenImage)),
+            const Expanded(child:Image(image: AssetImage(homeScreenImage))),
             const Text(letsHackHelperText,
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400)),
             const SizedBox(height: 20),
