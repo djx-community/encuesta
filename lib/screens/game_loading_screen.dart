@@ -29,12 +29,14 @@ class _GameLoadingScreenState extends State<GameLoadingScreen> {
       body: SafeArea(
           child: Column(
         children: <Widget>[
-          GreetingImageAndTextWidget(
-            greetingImage: gameLoadingImage,
-            greetingMessage: gameLoadingScreenCaptions[_index],
+          Expanded(
+            child: GreetingImageAndTextWidget(
+              greetingImage: gameLoadingImage,
+              greetingMessage: gameLoadingScreenCaptions[_index],
+            ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(40, 100, 40, 0),
+            padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
             child: ProgressionBarWidget(
               loadingText: loading,
               loadingValue: _loadingValue,
